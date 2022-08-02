@@ -1,0 +1,10 @@
+***************UseState**************
+i.  Updating the state triggers a re-render.
+
+
+***************UseRef****************
+i.    The value of useRef persist i.e it stays the same between re-renders
+ii.   Updating the ref does not trigger a re-render (that's the huge difference between useRef and UseState)
+iii.  useRef can be used to set focus on an element
+iv.   Never use useRef to grab the value of an input, use useState to work with values.
+v.    Only use useRef to create a reference to something in a component (setting a focus is a prime example)
