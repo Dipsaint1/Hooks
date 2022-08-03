@@ -11,8 +11,10 @@ v.    Only use useRef to create a reference to something in a component (setting
 
 
 *************** UseContext ****************
-
-
+i.    Don't try and squeeze too much state into one context
+ii.   Create multiple contexts and render the providers only where they are needed
+iii.  Only put a context provider as high up the tree as necessary
+iv.   Don't put a context provider in the 'app' file if it is only being used in components 4 levels deep
 
 
 *************** UseEffect ****************
