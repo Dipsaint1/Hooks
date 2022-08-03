@@ -1,10 +1,30 @@
-***************UseState**************
+*************** UseState **************
 i.  Updating the state triggers a re-render.
 
 
-***************UseRef****************
+*************** UseRef ****************
 i.    The value of useRef persist i.e it stays the same between re-renders
 ii.   Updating the ref does not trigger a re-render (that's the huge difference between useRef and UseState)
 iii.  useRef can be used to set focus on an element
 iv.   Never use useRef to grab the value of an input, use useState to work with values.
 v.    Only use useRef to create a reference to something in a component (setting a focus is a prime example)
+
+
+*************** UseContext ****************
+
+
+
+
+*************** UseEffect ****************
+i.     useEffect fires asynchronously(after).
+
+
+*************** UseLayoutEffect ****************
+i.     useLayoutEffect fires synchronously(at the same time) immediately after React has performed all DOM mutations.
+ii.    useLayoutEffect is called before the useEffect
+iii.   It is fundamentally called in the early stage of page rendering
+iv.    useLayoutEffect might be used in cases where we want to change the layout of an application before it prints out to the user.
+v.     It can also be used in cases where DOM measurements(like getting the scroll position of an element)
+vii.    One other special case is when you are updating a value like a 'ref' and you want to make sure it's up to date before any other code runs.
+viii.     It is mostly UI based.
+ix.    Another use case is when you are seeing a flash on0 the screen when changing several things in the DOM which takes a while to process.
